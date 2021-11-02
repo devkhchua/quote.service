@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quotation_details" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef07b931-0793-4634-8171-c653135d4edd">
+	<style name="Zebra" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 1]]></conditionExpression>
+			<style backcolor="#EFEBF9"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="productDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[productDesc]]></fieldDescription>
+	</field>
+	<field name="productAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[productAmount]]></fieldDescription>
+	</field>
+	<field name="productQuantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[productQuantity]]></fieldDescription>
+	</field>
+	<field name="productRate" class="java.lang.Double">
+		<fieldDescription><![CDATA[productRate]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement mode="Opaque" x="455" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#6539C0" uuid="4e5397aa-ba1c-44f3-961a-4a934dacabd9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="258da91d-13c2-4bce-81f9-18a2530f96df"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="255" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#6539C0" uuid="eb21bbcb-ef4a-48a2-add5-59b1f09e0eb4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="031f118f-b852-4880-9020-f8f9c4a87e65"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="355" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#6539C0" uuid="5e187360-cff5-46d6-99cc-939242065f0d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8cedac47-5111-466f-846c-c3c5aa9e30c6"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="20" y="0" width="235" height="30" forecolor="#FFFFFF" backcolor="#6539C0" uuid="954b18dd-7311-4bad-a6a1-a2fd6eea2680">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="796cfa4b-d089-45d8-b394-6bfed383d930"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Product Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="20" height="30" forecolor="#FFFFFF" backcolor="#6539C0" uuid="47609e13-56e6-4b56-a781-5634b8c686a5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="796cfa4b-d089-45d8-b394-6bfed383d930"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<textField>
+				<reportElement style="Zebra" mode="Opaque" x="0" y="0" width="20" height="30" uuid="8410d85d-eb5c-45eb-a490-59edb53abb3d"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Zebra" mode="Opaque" x="455" y="0" width="100" height="30" uuid="b1f8759b-b256-4e76-82e5-e6978b6234a6"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{productAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Zebra" mode="Opaque" x="355" y="0" width="100" height="30" uuid="3b71bf35-28d7-48ed-83ef-3baa1e5a6abd"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{productRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Zebra" mode="Opaque" x="20" y="0" width="235" height="30" uuid="39ce45f4-047f-453d-ace2-41d2ab60bba8"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{productDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Zebra" mode="Opaque" x="255" y="0" width="100" height="30" uuid="99a65173-196b-4537-b98a-5c3b191875ee"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{productQuantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

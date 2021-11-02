@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quotation_details" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef07b931-0793-4634-8171-c653135d4edd">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="termsAndCondition" class="java.lang.String">
+		<fieldDescription><![CDATA[termsAndCondition]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="15" splitType="Prevent">
+			<staticText>
+				<reportElement x="0" y="0" width="250" height="15" forecolor="#6F39C0" uuid="85276cf7-56f4-40bd-81e2-e693b6178b01">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="796cfa4b-d089-45d8-b394-6bfed383d930"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terms and Condition]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Prevent">
+			<textField>
+				<reportElement x="0" y="0" width="20" height="15" uuid="d2049dc8-8c98-4f6e-a0c6-e03722f441f4"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="530" height="15" uuid="8e9487f8-2c25-4a0e-a562-761f9912e750">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d907c112-88a8-46c6-889e-142a4586b4fa"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{termsAndCondition}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
