@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -31,6 +30,8 @@ public class Quotation {
     private Double quotationTotal;
     @Lob
     private byte[] quotationLogo;
+    @Lob
+    private byte[] quotationSign;
     @OneToOne(mappedBy = "quotation", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonManagedReference
     private QuoteFrom quoteFrom;

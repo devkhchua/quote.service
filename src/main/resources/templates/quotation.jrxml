@@ -12,6 +12,8 @@
 	</parameter>
 	<parameter name="products" class="java.util.List" isForPrompting="false"/>
 	<parameter name="terms" class="java.util.List" isForPrompting="false"/>
+	<parameter name="logo" class="java.io.ByteArrayInputStream" isForPrompting="false"/>
+	<parameter name="sign" class="java.io.ByteArrayInputStream" isForPrompting="false"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -31,6 +33,12 @@
 	</background>
 	<pageHeader>
 		<band height="184" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="280" y="-30" width="275" height="175" uuid="e088cec0-4524-4f47-b05a-5546c1c14cc6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 			<staticText>
 				<reportElement x="0" y="5" width="280" height="50" forecolor="#6F39C0" uuid="3a8549ca-f956-455e-973f-3835654187ef"/>
 				<textElement>
@@ -170,6 +178,19 @@
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA["Total Amount : "]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="120">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="180" height="105" uuid="748c8ca2-724b-4e71-a7b0-5eaa77c8984a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{sign}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="105" width="180" height="15" uuid="d6aefabb-9584-469b-81fb-133963a2f537"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Quotation Prepared By : ]]></text>
+			</staticText>
 		</band>
 		<band height="49">
 			<subreport>
