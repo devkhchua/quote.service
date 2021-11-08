@@ -18,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @Slf4j
-@RequestMapping("/quotation")
+@RequestMapping("/quote")
 public class QuotationController {
 
     @Autowired
