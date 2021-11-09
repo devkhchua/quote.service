@@ -7,6 +7,7 @@ import com.ms.resources.quote.service.repository.QuoteToRepo;
 import com.ms.resources.quote.service.service.QuotationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -18,9 +19,12 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Slf4j
 public class QuotationImpl implements QuotationService {
-    private final QuotationRepo quotationRepo;
-    private final QuoteToRepo quoteToRepo;
-    private final QuoteFromRepo quoteFromRepo;
+    @Autowired
+    private QuotationRepo quotationRepo;
+    @Autowired
+    private QuoteToRepo quoteToRepo;
+    @Autowired
+    private QuoteFromRepo quoteFromRepo;
 
     @Override
     public List<Quotation> findAllQuotation() {

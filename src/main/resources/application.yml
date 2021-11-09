@@ -12,6 +12,12 @@ spring:
   application:
     name: quote-service
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
