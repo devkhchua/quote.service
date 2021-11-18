@@ -5,7 +5,7 @@ spring:
     import: optional:configserver:http://config-service
   #zipkin: http://127.0.0.1:9411/
   datasource:
-    url: jdbc:mysql://localhost:3306/quote-service
+    url: jdbc:mysql://mysql:3306/quote-service
     username: root
     password: watashiwa
   jpa:
